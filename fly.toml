@@ -1,0 +1,15 @@
+app = "cliq-chatgpt-[generate-random-name]"
+primary_region = "sin"  # Singapore (closest to India)
+
+[build]
+  builder = "paketobuildpacks/builder:base"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+
+[env]
+  PORT = "8000"
